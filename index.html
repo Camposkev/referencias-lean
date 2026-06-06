@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referencias Bibliográficas — Campos &amp; Salazar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f1e7; --paper-2:#efe8da; --ink:#1f1b16; --ink-soft:#5c5447;
+    --accent:#7c3a2d; --accent-soft:#a8513f; --line:#d8cfbd; --gold:#9a7b3f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:17px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(154,123,63,.06), transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(124,58,45,.05), transparent 42%);
+    background-attachment:fixed;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:clamp(28px,6vw,72px) clamp(20px,5vw,40px) 80px}
+
+  header{border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:8px;
+    opacity:0;transform:translateY(12px);animation:rise .7s .05s ease forwards}
+  .kicker{font-family:"Fraunces",serif;font-size:.74rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2rem,7vw,3.1rem);
+    line-height:1.04;letter-spacing:-.01em;margin-bottom:14px}
+  .authors{font-style:italic;color:var(--ink-soft);font-size:1.05rem}
+  .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;
+    font-family:"Fraunces",serif;font-size:.82rem;color:var(--ink-soft)}
+  .meta span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  .toolbar{position:sticky;top:0;z-index:5;padding:18px 0 14px;
+    background:linear-gradient(var(--paper) 72%,transparent);
+    opacity:0;transform:translateY(12px);animation:rise .7s .18s ease forwards}
+  .search{position:relative}
+  .search input{width:100%;font-family:"Newsreader",serif;font-size:1rem;
+    color:var(--ink);background:var(--paper-2);border:1px solid var(--line);
+    border-radius:2px;padding:13px 16px 13px 42px;outline:none;transition:.2s}
+  .search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,58,45,.1)}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:18px;height:18px;stroke:var(--ink-soft)}
+  .count{margin-top:9px;font-family:"Fraunces",serif;font-size:.78rem;
+    letter-spacing:.04em;color:var(--ink-soft)}
+  .count b{color:var(--accent);font-weight:600}
+
+  ol{list-style:none;counter-reset:ref}
+  li{counter-increment:ref;border-bottom:1px solid var(--line);
+    opacity:0;animation:fade .5s ease forwards}
+  li a, li .noref{display:grid;grid-template-columns:auto 1fr auto;gap:14px;
+    align-items:start;padding:18px 6px;text-decoration:none;color:var(--ink);
+    transition:background .2s,padding .2s}
+  li a:hover{background:var(--paper-2);padding-left:14px;padding-right:14px}
+  .num{font-family:"Fraunces",serif;font-size:.8rem;color:var(--gold);
+    font-weight:600;padding-top:4px;min-width:2.2ch;text-align:right;font-variant-numeric:tabular-nums}
+  .cite{font-size:1.01rem;line-height:1.5}
+  .cite .yr{color:var(--accent-soft);font-weight:500}
+  .go{font-family:"Fraunces",serif;font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);white-space:nowrap;padding-top:5px;
+    opacity:0;transform:translateX(-4px);transition:.2s}
+  li a:hover .go{opacity:1;transform:translateX(0)}
+  .go.muted{color:var(--ink-soft);opacity:.55}
+  .noref{cursor:default}
+  .hidden{display:none!important}
+  .empty{padding:40px 6px;color:var(--ink-soft);font-style:italic;text-align:center}
+
+  footer{margin-top:42px;padding-top:22px;border-top:1px solid var(--line);
+    font-family:"Fraunces",serif;font-size:.76rem;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:var(--accent);text-decoration:none}
+
+  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+  @keyframes fade{to{opacity:1}}
+  @media (max-width:560px){
+    body{font-size:16px}
+    li a, li .noref{grid-template-columns:auto 1fr;gap:12px}
+    .go{grid-column:2;padding-top:8px}
+    li a:hover{padding-left:6px;padding-right:6px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- ===== Edita libremente este encabezado ===== -->
+  <header>
+    <div class="kicker">Referencias Bibliográficas</div>
+    <h1>Sinergia de herramientas Lean para la eficiencia operativa en PYMEs textiles</h1>
+    <div class="authors">Kevin Campos &amp; Nicole Salazar</div>
+    <div class="meta">
+      <span><span class="dot"></span>Universidad Peruana de Ciencias Aplicadas (UPC)</span>
+      <span><span class="dot"></span><span id="total"></span> fuentes citadas</span>
+    </div>
+  </header>
+  <!-- ============================================= -->
+
+  <div class="toolbar">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="text" placeholder="Buscar por autor, a&#241;o, t&#233;cnica (SMED, Poka Yoke, TPM)&#8230;" autocomplete="off">
+    </div>
+    <div class="count" id="count"></div>
+  </div>
+
+  <ol id="list"></ol>
+  <div class="empty hidden" id="empty">Sin resultados para esa b&#250;squeda.</div>
+
+  <footer>
+    <span>Toca cualquier referencia para abrir su DOI</span>
+    <span>Generado para impresi&#243;n / c&#243;digo QR</span>
+  </footer>
+</div>
+
+<script>
+const REFS = [{"text": "Abdul, S., Arsalan, A., Atif, J., Muhammad, I., Muhammad, R. & Muhammad, S. (2022). Reduction of non-conforming through statistical process control charts in textile industry. Industria Textil, 73,(5), 537-543.", "url": "https://doi.org/10.35530/IT.073.05.202166", "sort": "abdul"}, {"text": "Aguilar P., A., Bellido Y., J., Quiroz F., J. C., & Nallusamy, S. (2023). A proposed model for inventory management to minimize the rate of raw materials tied up of textile industry with Lean engineering tools. SSRG International Journal of Mechanical Engineering, 10(8), 11–20.", "url": "https://doi.org/10.14445/23488360/IJME-V10I8P102", "sort": "aguilar p."}, {"text": "Aguilar V., Q.; Castañeda G., M.; Marquez B., L.; Gonzalez V., J.; Taboada G., P. Concurrent Engineering Model for the Implementation of New Products in the Textile Industry: A Case Study. Appl. Sci. 2021, 11, 3584.", "url": "https://doi.org/10.3390/app11083584", "sort": "aguilar v."}, {"text": "Ahmed, T., Toki, G. F. I., Mia, R., Li, J., Islam, S. R., & Rishad, M. M. A. (2022). Implementation of the Six Sigma methodology for reducing fabric defects on the knitting production floor: A sustainable approach for knitting industry. Textile & Leather Review. 2022; 5:223-239.", "url": "https://doi.org/10.31881/TLR.2022.29", "sort": "ahmed"}, {"text": "Alanya, B. S., Dextre, K. E., Nuñez, V. H., Marcelo, G. E., Alvarez, J. C., & Hatakeyama, K. (2024). APPLICATION OF LEAN MANUFACTURING TO IMPROVE PROCESSES AND INCREASE PRODUCTIVITY IN THE TEXTILE INDUSTRY OF PERU: CASE STUDY. South African Journal of Industrial Engineering, 35(2), 140-153.", "url": "https://doi.org/10.7166/35-2-2932", "sort": "alanya"}, {"text": "Alcazar, P. A., Escalante Cier, A. E., & Collao Diaz, M. F. (2023). Production model based on Lean Manufacturing and TPM to increase efficiency in a company in the textile sector.", "url": "https://dx.doi.org/10.18687/LEIRD2023.1.1.589", "sort": "alcazar"}, {"text": "Ali, S., Muhammad, N., Sarker, R., Kandasamy, J. & Vlachos, I. (2024). Improving changeover techniques in apparel manufacturing through single minute exchange of die: implications for benchmarking. Benchmarking: An International Journal, Vol. 32 No. 4, pp. 1207-1223.", "url": "https://doi.org/10.1108/BIJ-11-2022-0718", "sort": "ali"}, {"text": "Baldeon R., J. D., Doroteo C., M. D., & Calderón G., W. D. (2024). Implementation of Lean-TPM strategies to improve sewing efficiency: A case study in a Peruvian garment manufacturer SME. SSRG International Journal of Economics and Management Studies, 11(12), 18–28.", "url": "https://doi.org/10.14445/23939125/IJEMS-V11I12P103", "sort": "baldeon r."}, {"text": "Begum, S., Akash, A., Khan, S. & Bhuiyan, M. (2024). A framework for lean manufacturing implementation in the textile industry: a research study. Global Mainstream Journal.", "url": "https://doi.org/10.62304/IJSE.V1I04.181", "sort": "begum"}, {"text": "Berhe, H. H., Gebremichael, S., & Tsegay Beyene, K. (2023). Development, validation and verification of innovative integrated Kaizen philosophy (CI) framework and its implementation procedure for enhancing manufacturing industries sustainable competitiveness. International Journal of Quality & Reliability Management, 40(10), 2463–2518.", "url": "https://doi.org/10.1108/IJQRM-08-2022-0258", "sort": "berhe"}, {"text": "Bizuneh, B., & Omer, R. (2024). Lean waste prioritisation and reduction in the apparel industry: Application of waste assessment model and value stream mapping. Cogent Engineering. 11(1), Article 2341538.", "url": "https://doi.org/10.1080/23311916.2024.2341538", "sort": "bizuneh"}, {"text": "Braglia, M., Di Paco, F., & Marrazzini, L. (2023). A new Lean tool for efficiency evaluation in SMED projects. International Journal of Advanced Manufacturing Technology.", "url": "https://doi.org/10.1007/S00170-023-11508-9", "sort": "braglia"}, {"text": "Bratic, D., Griffin, J. M., D., Miljkovi´cmiljkovi´c, P., Jureči´c, D. J., & Grabari´cgrabari´c, T. (2025). AI-Driven Random Forest Model and the Six Sigma Approach for Enhancing Offset Printing Process and Product Quality. Applied Sciences.", "url": "https://doi.org/10.3390/app15052266", "sort": "bratic"}, {"text": "Buruk Sahin, Y., & Aktar Demirtaş, E. (2021). DSS-Based Process Control and FMEA Studies for Different Processes in the Field of Textile. Textile and Apparel, 31(4), 250-263.", "url": "https://doi.org/10.32710/tekstilvekonfeksiyon.917671", "sort": "buruk sahin"}, {"text": "Camborda, G. (2023). Mejora en los procesos de tizado y corte en una empresa de tejido de punto. Revista Industrial Data, 26(2), 53-92.", "url": "https://doi.org/10.15381/idata.v26i2.24002", "sort": "camborda"}, {"text": "Cifone, F. D., Hoberg, K., Holweg, M., & Staudacher, A. P. (2021). ‘Lean 4.0’: How can digital technologies support lean practices? International Journal of Production Economics, 241, 108258.", "url": "https://doi.org/10.1016/J.IJPE.2021.108258", "sort": "cifone"}, {"text": "Collazos Paucar, E., Reátegui Paredes, V. R., Balbuena Hernández, J. R., Chong Vela, R., & Chiroque Sernaqué, D. (2022). SMED methodology and the 5S philosophy to improve the pro-cess in the sewing lines of a garment company. Universidad Y Sociedad, 14(S6), 415–426.", "url": "https://rus.ucf.edu.cu/index.php/rus/article/view/3473", "sort": "collazos paucar"}, {"text": "Dagne, T. B. (2023). Productivity Improvement through customized lean and Six Sigma for Garment Manufacturing Industries. Journal of Optimization in Industrial Engineering, 16(1), 9-17.", "url": "https://doi.org/10.22094/joie.2022.1904036.1763", "sort": "dagne"}, {"text": "Damian G., Espiritu P., Quiroz F. & Nallusamy (2023). Productivity Enhancement through a Proposed Methodology in the Cutting Process of SMEs. International Journal of Mechanical Engineering.", "url": "https://doi.org/10.14445/23488360/IJME-V10I8P101", "sort": "damian g."}, {"text": "De la Flor, A., Vigil, M., & Ruiz Ruiz, M. F. (2024). Improvement of the sustainable performance in a textile company using the lean-green methodology. International Journal of Production Management and Engineering, 12(1), 105-116.", "url": "https://doi.org/10.4995/ijpme.2024.20260", "sort": "de la flor"}, {"text": "Diaz J., J. A., Nemi P., L. A., & Tupia De La Cruz, E. L. (2024). Impact of Lean and TPM practices on productivity and quality: Insights from a Peruvian textile SME. SSRG International Journal of Industrial Engineering, 11(3), 18–28.", "url": "https://doi.org/10.14445/23499362/IJIE-V11I3P104", "sort": "diaz j."}, {"text": "Emekdar, E., Hatice A., Sahin, U. K.; Kursun, Tuluk, B. & Simsek, A.N. (2023). Process improvement and efficiency analysis using the Single‐Minute Exchange of Dies method applied to Set‐Up and operation of screen printing machines. Review of Progress in Coloration and Related Topics.", "url": "https://doi.org/10.1111/cote.12676", "sort": "emekdar"}, {"text": "Ewnetu, M., & Gzate, Y. (2023). Assembly operation productivity improvement for garment production industry through the integration of lean and work-study, a case study on Bahir Dar textile share company in garment, Bahir Dar, Ethiopia. Heliyon, 9, e17917.", "url": "https://doi.org/10.1016/j.heliyon.2023.e17917", "sort": "ewnetu"}, {"text": "Fajardo, O. (2024). Reducción de las paradas de planta aplicando el mapeo de la cadena de valor (VSM) y cambios rápidos (SMED) de la metodología Lean Manufacturing. Industrial Data, 27(1).", "url": "https://dx.doi.org/10.15381/idata.v27i1.25011", "sort": "fajardo"}, {"text": "Fernández Diaz, L.& Vera Rojas, N. & Quiroz Flores, J. (2024). Productivity Enhancement by Layout Redesign and Application of Lean Principles in the Apparel Industry.", "url": "https://doi.org/10.1007/978-3-031-56373-7_12", "sort": "fernández diaz"}, {"text": "García Cuevas, A., & Vasquez Calderon, G. B. (2024). Implementación de Poka Yoke, Jidoka y estandarización de procesos para reducir las mermas en el proceso de fabricación de chocolates en una empresa de Lima. Universidad Peruana de Ciencias Aplicadas (UPC).", "url": "https://repositorioacademico.upc.edu.pe/handle/10757/674109", "sort": "garcía cuevas"}, {"text": "Harish D.R.; Gowtham T.; Arunachalam, A.; Narassima M.S.; Lamy D. & Thenarasu M. (2023). Productivity improvement by application of simulation and lean approaches in an multimodel assembly line. Proceedings of the Institution of Mechanical Engineers Part B Journal of Engineering Manufacture.", "url": "https://doi.org/10.1177/09544054231182264", "sort": "harish d.r.; gowtham t.; arunachalam"}, {"text": "Haseeb, A., Khan, M.A., Shaikh, S.A., Iftikhar, Z.,Kumar, R., Bux, K., Naz, A., Hassam. (2023). Performance Optimization of Pillow Sheet Set Sewing Assembly Line by SAM Analysis and Lean Manufacturing Techniques of Method Study & Work Measurement. J Appl Res Eng Technol & Engineering, 4(1), 1-12.", "url": "https://doi.org/10.4995/jarte.2023.17861", "sort": "haseeb"}, {"text": "Hoellthaler, G., Braunreuther, S., & Reinhart, G. (2018). Digital Lean ProductionAn Approach to Identify Potentials for the Migration to a Digitalized Production System in SMEs from a Lean Perspective. Procedia CIRP, 67, 522–527.", "url": "https://doi.org/10.1016/J.PROCIR.2017.12.255", "sort": "hoellthaler"}, {"text": "Huertas R., A., Quispe H., S., Leon C., C., & Velasquez C., J. (2022). Increased efficiency of a metalworking SME through process redesign using SMED, Poka Yoke and Work Standardization. Proceedings of the LACCEI International MultiConference for Engineering, Education and Technology, 2022-December.", "url": "https://doi.org/10.18687/LEIRD2022.1.1.69", "sort": "huertas r."}, {"text": "Islam, A. S. M. T. (2021). Lean Six Sigma for the process improvement of yarn package dyeing in textile industry. IUP Journal of Operations Management, 20(1), 1-17.", "url": null, "sort": "islam"}, {"text": "Jancarczyk, D., Rysinski, J., & Worek, J. (2024). Comparative Analysis of Measurement Tools in the Cognex D900 Vision System. Applied Sciences, 14, 8296.", "url": "https://doi.org/10.3390/app14188296", "sort": "jancarczyk"}, {"text": "Joy, R. A., Hawlader, M. S., Rahman, M. S., Hossain, M. R., Shamim, S. I., & Mahmud, H. (2024). Improving quality, productivity, and cost aspects of a sewing line of apparel industry using TQM approach. Mathematical Problems in Engineering, 2024, 6697213.", "url": "https://doi.org/10.1155/2024/6697213", "sort": "joy"}, {"text": "Kanakana K., M. G., Bello, K. A., & Katumba, G. K. (2024). Optimization of the clothing industry manufacturing process to improve efficiency. Engineering Proceedings, 76, 28.", "url": "https://doi.org/10.3390/engproc2024076028", "sort": "kanakana k."}, {"text": "Kaur, G.; Dey, B.K.; Pandey, P.; Majumder, A.; Gupta, S. A Smart Manufacturing Process for Textile Industry Automation under Uncertainties. Processes 2024, 12, 778.", "url": "https://doi.org/10.3390/pr12040778", "sort": "kaur"}, {"text": "Khan, R., Ansari, J., Akbar, A., Kaka, S., Sarwar, U., & Hussain, Z. (2022). Setup Time Reduction Using Single Minute Exchange of Die in Textile Industry. Tianjin Daxue Xuebao (Ziran Kexue yu Gongcheng Jishu Ban)/Journal of Tianjin University Science and Technology.", "url": "https://doi.org/10.17605/OSF.IO/3GRQX", "sort": "khan"}, {"text": "Kirin, S., Hursa Šajatović, A., & Firšt Rogale, S. (2024). Use of MTM, RAV and ZAK Methods in Determining Working Methods and Time Norms in Technological Operations of Sewing Clothes. Processes, 12(4), 740.", "url": "https://doi.org/10.3390/pr12040740", "sort": "kirin"}, {"text": "Kumar, D., Mohan, G., & Mohanasundaram, K. M. (2022). Design and implementation of the production line in garment industry. Industria Textila, 73(6), 687–692.", "url": "https://doi.org/10.35530/IT.073.06.1745", "sort": "kumar"}, {"text": "Kuo, C.-F. J., Huang, C.-C., & Yang, C.-H. (2021). Integration of multivariate control charts and decision tree classifier to determine the faults of the quality characteristic(s) of a melt spinning machine used in polypropylene as-spun fiber manufacturing. Part I: The application of the Taguchi method and principal component analysis in the processing parameter optimization of the melt spinning process. Textile Research Journal, 0(0), 1–15.", "url": "https://doi.org/10.1177/0040517520988615", "sort": "kuo"}, {"text": "Kuo, C.-F. J., Huang, C.-C., Yang, C.-H., & Chen, S.-H. (2021). Integration of multivariate control charts and decision tree classifier to determine the faults of the quality characteristic(s) of a melt spinning machine used in polypropylene as-spun fiber manufacturing. Textile Research Journal, 0(0), 1–14.", "url": "https://doi.org/10.1177/00405175211011775", "sort": "kuo"}, {"text": "Kuryla Queirolo, A. J., Novelli Toce, A., Quiroz Flores, J. C., Collao Diaz, M., & Flores 2Pérez, A. (2023). The impact of implementing lean manufacturing tools in the productivity of the dyeing area of a textile company. Journal of Manufacturing Science and Engineering, 19(2), 107-120.", "url": "https://doi.org/10.15381/mfg.2023.12045", "sort": "kuryla queirolo"}, {"text": "Mahir, S. Q., Diraj, R. A., Hossain, M. R., Hasan, M. M., Rahman, S., Shetu, M. S. S., Karim, M. R., & Hossain, M. Z. (2023). Implementation of Kaizen on a basic shorts manufacturing to reduce cost and accelerate productivity. Australian Journal of Engineering and Innovative Technology, 5(1), 26-34.", "url": "https://doi.org/10.34104/ajeit.023.026034", "sort": "mahir"}, {"text": "Medyński, D., Bonarski, P., Motyka, P., Wysoczański, A., Gnitecka, R., Kolbusz, K., Dąbrowska, M., Burduk, A., Pawelec, Z., & Machado, J. (2023). Digital Standardization of Lean Manufacturing Tools According to Industry 4.0 Concept. Applied Science (Switzerland), 13(10).", "url": "https://doi.org/10.3390/app13106259", "sort": "medyński"}, {"text": "Mohammad, A., Hamja, A., & Hasle, P. (2024). Reduction of changeover time through SMED with RACI integration in garment factories. International Journal of Lean Six Sigma.", "url": "https://doi.org/10.1108/IJLSS-10-2021-0176", "sort": "mohammad"}, {"text": "Muhammad, S., Dawood, I., Ansari, A., Abdul, S., Rauf, M., & Jamil, A. (2022). Reduction of non-conforming through statistical process control charts in textile industry. Industria Textila. 73(5), 537–543.", "url": "https://doi.org/10.35530/IT.073.05.202166", "sort": "muhammad"}, {"text": "Munive Silvestre, S. E., Paucar Chaicha, V. D., Alvarez Merino, J. C., & Nallusamy, S. (2022). Implementation of a Lean Manufacturing and SLP-based system for a footwear company. Production, 32, e20210072.", "url": "https://doi.org/10.1590/0103-6513.20210072", "sort": "munive silvestre"}, {"text": "Nchalala, A., Alexander, T., & Taifa, I. W. R. (2023). Establishing standard allowed minutes and sewing efficiency for the garment industry in Tanzania. Research Journal of Textile and Apparel, 27(2), 246–263.", "url": "https://doi.org/10.1108/RJTA-09-2021-0112", "sort": "nchalala"}, {"text": "Nedra, A., Jun, X., Nèjib, S., & Jiajia, D. (2022). Effect of ISO (9001) certification and article type produced on Lean Six Sigma application successes: A case study within textile companies. Fibres & Textiles in Eastern Europe, 30(2), 17–22.", "url": "https://doi.org/10.2478/ftee-2022-0003", "sort": "nedra"}, {"text": "Ondra, P. (2022). The Impact of Single Minute Exchange of Die and Total Productive Maintenance on Overall Equipment Effectiveness. JOURNAL OF COMPETITIVENESS, 14(3), 113–132.", "url": "https://doi.org/10.7441/joc.2022.03.07", "sort": "ondra"}, {"text": "Patel, A. S., & Patel, K. M. (2023). Status of lean six sigma implementation in Indian industries: A cross-sectional national survey. International Journal of Lean Six Sigma, 14(4), 791-814.", "url": "https://doi.org/10.1108/IJLSS-05-2022-0107", "sort": "patel"}, {"text": "Pretell Trigoso, J. A., Orellana-Ascencio, C. G., & Meza Ortiz, R. N. (2024). Operational excellence in freight logistics: A Lean service case study integrating Poka Yoke and standardized work. SSRG International Journal of Industrial Engineering, 11(3), 29–41.", "url": "https://doi.org/10.14445/23499362/IJIE-V11I3P105", "sort": "pretell trigoso"}, {"text": "Quiroz Flores, J. C., Acevedo Aybar, C., Jáuregui Alfaro, M., & Ali, A. (2024). Optimizing warehouse management in footwear commercial companies: A case study on Lean-BPM. SSRG International Journal of Mechanical Engineering, 11(1), 16-27.", "url": "https://doi.org/10.14445/23488360/IJME-V11I1P102", "sort": "quiroz flores"}, {"text": "Rahman, M. S., Tania, T., Ali, M. H., & Joy, R. A. (2023). Investigation and design set up of style change over delay and implementation of a lean tool SMED in ready-made garments industry: A cost-effective lean concept with enhancing profitability. Open Access Library Journal, 10, Article e10697.", "url": "https://doi.org/10.4236/oalib.1110697", "sort": "rahman"}, {"text": "Santos, E.; Lima, T.M.; Gaspar, P.D. (2023). Optimization of the Production Management of an Upholstery Manufacturing Process Using Lean Tools: A Case Study. Applied Sciences (Switzerland).", "url": "https://doi.org/10.3390/app13179974", "sort": "santos"}, {"text": "Santos, V., Sousa, V. F. C., Silva, F. J. G., Matias, J. C. O., Costa, R. D., Pinto, A. G., & Campilho, R. D. S. G. (2022). Applying the SMED Methodology to Tire Calibration Procedures. Systems, 10(6).", "url": "https://doi.org/10.3390/SYSTEMS10060239", "sort": "santos"}, {"text": "Setiawan, L., & Hasibuan, S. (2021). Improve ramp-up performance on the sewing process in a sports shoe factory using 8-disciplines and lean manufacturing. Quality Innovation Prosperity, 25(2), 19–36.", "url": "https://doi.org/10.12776/qip.v25i2.1516", "sort": "setiawan"}, {"text": "Silva C., D., Campoblanco Carhuachin, R., Leon Chavarri, C., Cardenas Medina, J., & Borges Ribeiro, R. (2025). A Production Management Method to Reduce Non-Fulfillment of Orders Based on Lean Tools and Change Management: Case of a Peruvian Apparel Company. International Journal of Engineering Trends and Technology, 73(4), 191–209.", "url": "https://doi.org/10.14445/22315381/IJETT-V73I4P118", "sort": "silva c."}, {"text": "Singh Rathi, S., Sahu, K., & Kumar, S. (2024). Implementation of lean manufacturing methods to improve rolling mill productivity. International Journal of Advanced Technology and Engineering Exploration, 11(111).", "url": "https://doi.org/10.19101/ijatee.2023.10102004", "sort": "singh rathi"}, {"text": "Tavares de Carvalho, P. T., Lopes, J. D., & Raimundo, R. J. (2025). Innovation impact in the textile industry: From the Toyota Production System to Artificial Intelligence. Sustainability, 17(3), 1170.", "url": "https://doi.org/10.3390/su17031170", "sort": "tavares de carvalho"}, {"text": "Tintaya, N., Estefany, Y., Krenz, C., & Yván, O. (2024). Propuesta de mejora para incrementar la eficiencia de la producción de las mangas filtrantes utilizando las herramientas 5S, Trabajo Estandarizado y Poka Yoke en una MYPE. Universidad 43 Peruana de Ciencias Aplicadas (UPC).", "url": "https://repositorioacademico.upc.edu.pe/handle/10757/683090", "sort": "tintaya"}, {"text": "Toki, G., Taosif A., Hossain C., Rezaul K., Faruk R. & Syed R. (2023). Single Minute Exchange Die (SMED): A sustainable and well-timed approach for Bangladeshi garments industry. Cleaner Engineering and Technology.", "url": "https://doi.org/10.1016/j.clet.2022.100592", "sort": "toki"}, {"text": "Torres M., M., Guerrero López, N., & Saenz Moron, M. (2023). Improvement model to increase the efficiency of the sewing area in a textile SME by applying SMED, 5S and standardized work: A Peruvian case study.", "url": "https://doi.org/10.18687/LACCEI2023.1.1.1051", "sort": "torres m."}, {"text": "Tsai, W.H.; Chen, H. C.; Chang, S. C.; Chan, K.-C. Revolutionizing Textile Manufacturing: Sustainable and Profitable Production by Integrating Industry 4.0, Activity-Based Costing, and the Theory of Constraints. Processes 2024, 12, 2311.", "url": "https://doi.org/10.3390/pr12112311", "sort": "tsai"}, {"text": "Ukey, P. H., Deshmukh, A., & Arora, A. (2022). Implementation of lean tools in apparel industry for improving productivity. Proceedings on Engineering Sciences, 3(2), 247–252.", "url": "https://doi.org/10.24874/PES03.02.012", "sort": "ukey"}, {"text": "Ural, Ö., & Elmali, C. (2023). Statistical process control as a tool for quality improvement: A case study in denim pant production. Mugla Journal of Science and Technology, 9(2), 94-103.", "url": "https://doi.org/10.22531/muglajsci.1316596", "sort": "ural"}, {"text": "Villamil, C. & Arteaga, J. (2023). A Model for the Implementation of Lean Manufacturing in Textile SMEs in the Department of Cundinamarca. Journal of Engineering Science and Technology Review.", "url": "https://doi.org/10.25103/jestr.165.15", "sort": "villamil"}, {"text": "Villanueva, R. E. P., & Duke, A. M. R. (2022). DESIGN OF AN ERROR-PROOF DEVICE (POKA YOKE) IN THE CUP MOLDING PROCESS IN A CLOTHING MANUFACTURING COMPANY, HONDURAS. Proceedings of the LACCEI International Multi-Conference for Engineering, Education and Technology, 2022-July.", "url": "https://doi.org/10.18687/LACCEI2022.1.1.597", "sort": "villanueva"}, {"text": "Villena C., E. L., Rodríguez C., K. K., & Tupia De La Cruz, E. L. (2025). Lean-TPM integration for quality and efficiency improvement in Peruvian textile SMEs: A study on defect reduction and equipment effectiveness. SSRG International Journal of Industrial Engineering, 12(1), 1–11.", "url": "https://doi.org/10.14445/23499362/IJIE-V12I1P101", "sort": "villena c."}, {"text": "Yazıcı, K., Gökler, S. H., & Boran, S. (2020). An integrated SMED-fuzzy FMEA model for reducing setup time. Journal of Intelligent Manufacturing, 32, 1547-1561.", "url": "https://doi.org/10.1007/s10845-020-01675-x", "sort": "yazıcı"}, {"text": "Yemane, A. (2021). Productivity improvement of BOB T-shirt through line balancing using control limit analysis and discrete event simulation. Journal of Optimization in Industrial Engineering, 14(2), 19-32.", "url": "https://doi.org/10.22094/JOIE.2020.561766.1545", "sort": "yemane"}, {"text": "Zanin, A. H., Kamimura, E. S., Pinto, A. R. F., & Hermosilla, J. G. (2023). Guidelines for the implementation of lean manufacturing in micro- and small-sized enterprises: A study in the industrial textile manufacturing in the region of Barretos-SP. Revista Brasileira de Gestão e Desenvolvimento Regional, 19(2), 120–142.", "url": "https://doi.org/10.54399/rbgdr.v19i2", "sort": "zanin"}, {"text": "Ziemba, J., Hawryluk, M., & Rychlik, M. (2021). Application of 3D scanning as an indirect method to analyze and eliminate errors on the manufactured yoke-type forgings forged in SMED device on modernized crank press. Materials, 14(1), 1–23.", "url": "https://doi.org/10.3390/MA14010137", "sort": "ziemba"}, {"text": "Ünal, C., & Bekiroğlu, B. (2024). Simulation analysis of the effect of working method differences on production efficiency in the apparel industry. Fibres & Textiles in Eastern Europe, 32, 21–28.", "url": "https://doi.org/10.2478/ftee-2024-0017", "sort": "ünal"}];
+const list = document.getElementById('list');
+const countEl = document.getElementById('count');
+const emptyEl = document.getElementById('empty');
+document.getElementById('total').textContent = REFS.length;
+
+function yearWrap(t){
+  return t.replace(/\((\d{4}[a-z]?)\)/, '(<span class="yr">$1</span>)');
+}
+function render(items){
+  list.innerHTML = '';
+  if(!items.length){emptyEl.classList.remove('hidden');countEl.innerHTML='';return;}
+  emptyEl.classList.add('hidden');
+  items.forEach((r,i)=>{
+    const li=document.createElement('li');
+    li.style.animationDelay=(Math.min(i,25)*0.012)+'s';
+    const inner = r.url
+      ? `<a href="${r.url}" target="_blank" rel="noopener">
+           <span class="num">${r._n}</span>
+           <span class="cite">${yearWrap(r._html)}</span>
+           <span class="go">DOI &#8599;</span>
+         </a>`
+      : `<div class="noref">
+           <span class="num">${r._n}</span>
+           <span class="cite">${yearWrap(r._html)}</span>
+           <span class="go muted">sin DOI</span>
+         </div>`;
+    li.innerHTML = inner;
+    list.appendChild(li);
+  });
+}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+REFS.forEach((r,i)=>{r._n=i+1;r._html=esc(r.text);r._search=(r.text+' '+(r.url||'')).toLowerCase();});
+
+function filter(q){
+  q=q.trim().toLowerCase();
+  const terms=q.split(/\s+/).filter(Boolean);
+  const out = !terms.length ? REFS : REFS.filter(r=>terms.every(t=>r._search.includes(t)));
+  render(out);
+  countEl.innerHTML = q
+    ? `<b>${out.length}</b> de ${REFS.length} referencias`
+    : `<b>${REFS.length}</b> referencias &#183; orden alfab&#233;tico`;
+}
+document.getElementById('q').addEventListener('input',e=>filter(e.target.value));
+filter('');
+</script>
+</body>
+</html>
